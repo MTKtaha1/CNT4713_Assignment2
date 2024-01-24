@@ -6,7 +6,7 @@ class Assignment2:
     
     def tellAge(self, currentYear):
         birthyear = currentYear - self.year
-        print(f"your age is {birthyear}")
+        print(f"Your age is {birthyear}")
 
     def listAnniversaries(self):
         current_year =2022
