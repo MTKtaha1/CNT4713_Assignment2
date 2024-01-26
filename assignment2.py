@@ -13,12 +13,11 @@ class Assignment2:
         anniversary = [i for i in range(10, current_year - self.year + 1, 10)]
         return anniversary
     
-    def modify_year(self, n: int):
+    def modify_year(self, n):
         year_str = str(self.year)
         repeated_prefix = year_str[:2] * n
         modified_year = self.year * n
-        result = repeated_prefix + str(modified_year)[::2]
-        return result
+        return repeated_prefix + str(modified_year)[::2]
     
     @staticmethod
     def checkGoodString(string):
