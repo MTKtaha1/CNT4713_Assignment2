@@ -12,28 +12,21 @@ class Assignment2:
         current_year =2022
         anniversary = [i for i in range(10, current_year - self.year + 1, 10)]
         return anniversary
-    def modifyYear(self, n):
+    
+    def modify_year(self, n: int):
         year_str = str(self.year)
-
-        # Extract the first two characters of the year
-        first_two_chars = year_str[:2]
-
-        # Extract odd positioned characters of the year
-        odd_chars = year_str[::2]
-        
-        modified_string = first_two_chars * n + odd_chars * n
-
-        return modified_string
+        repeated_prefix = year_str[:2] * n
+        modified_year = self.year * n
+        result = repeated_prefix + str(modified_year)[::2]
+        return result
     
     @staticmethod
     def checkGoodString(string):
         if len(string) < 9:
             return False
-
     # Checking password starts with a lower case letter a-z
         if not string[0].islower() or not string[0].isalpha():
             return False
-
     # Checking password contains only one number
         if sum(c.isdigit() for c in string) != 1:
             return False
